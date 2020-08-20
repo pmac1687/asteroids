@@ -88,8 +88,8 @@ def end_game():
 def new_game():
     global game_over
     print('new')
-    text = gamebox.from_text(400, 105, 'ASTEROIDS',fontname='font', fontsize=36, color="red")
-    text2 = gamebox.from_text(450, 105, 'game controls:left,right,up,down',fontname='font', fontsize=36, color="red")
+    text = gamebox.from_text(400, 105, 'ASTEROIDS', fontsize=36, color="red")
+    text2 = gamebox.from_text(450, 105, 'game controls:left,right,up,down', fontsize=36, color="red")
     camera.draw(text)
     camera.draw(text2)
     camera.diplay()
@@ -104,7 +104,7 @@ def draw_background():
 def draw_text():
     global texts
     global timer
-    text = gamebox.from_text(400, 105, str(timer),fontname='font', fontsize=36, color="red")
+    text = gamebox.from_text(400, 105, str(timer), fontsize=36, color="red")
     texts.append(text)
     
     
@@ -236,7 +236,7 @@ def add_enemies():
     timer = int(new_time-t1_start)
     for text in texts:
         texts.remove(text)
-    text = gamebox.from_text(400, 105, str(timer),fontname='font', fontsize=36, color="red") 
+    text = gamebox.from_text(400, 105, str(timer),fontsize=36, color="red") 
     texts.append(text)
     camera.draw(text)
     if timer == 15 and timer_counter== True:
@@ -261,7 +261,7 @@ def next_level():
    global master_timer
    global level_up
    level_up = False
-   text = gamebox.from_text(400, 105, "next level",fontname='font', fontsize=36, color="red") 
+   text = gamebox.from_text(400, 105, "next level",fontsize=36, color="red") 
    camera.draw(text)
    camera.display()
    sleep(10)
